@@ -1,0 +1,29 @@
+#main_wrapper {
+    width:400px;
+}
+
+.md-button.md-default-theme {
+    margin:5px;
+}
+
+ul.colorpicker{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    color:transparent;
+    font-size:1px;
+    user-select:none;
+}
+    ul.colorpicker li {
+        display:inline-block;
+        width:20px;
+        height:32px;
+        margin:2px;
+        border-radius:2px;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    ul.colorpicker li.active {
+        height:40px;
+    }
+

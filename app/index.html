@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="bookmarks">
+    <head>
+        <meta charset="utf-8">
+        <title>Bookmarks</title>
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <link href="styles/main.css" rel="stylesheet">
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+        <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.min.css">
+        <link rel="stylesheet" href="styles/select.css">
+
+
+
+    </head>
+    <body ng-controller="MainController">
+        <a href="#/">search</a>
+        <a href="#/add" ng-click="current.getTab()">add/edit</a>
+        <a href="#/folder" ng-click="current.getFolder()">folder</a>
+        <a href="#/settings">settings</a>
+        <div id="main_wrapper" >
+            <div ng-view></div>
+        </div>
+        <!-- Scripts -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-material/angular-material.js"></script>
+        <script src="bower_components/angular-ui-select/dist/select.min.js"></script>
+
+        <script src="special_scripts/storage.js"></script>
+        <script src="special_scripts/lz-string.min.js"></script>
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/services/storage.service.js"></script>
+        <script src="scripts/services/main.service.js"></script>
+        <script src="scripts/controllers/main.controller.js"></script>
+        <script src="scripts/directives/main.directive.js"></script>
+        <script src="scripts/helpers/main.helpers.js"></script>
+
+    </body>
+</html>

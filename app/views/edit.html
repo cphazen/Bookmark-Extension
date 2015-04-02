@@ -1,0 +1,33 @@
+
+    <h1 class="h4">Edit bookmark</h1>
+	<form ng-submit="edit()">
+		<div class="form-group">
+			<label for="title">Name</label>
+			<input type="text" id="title"  class="form-control" ng-model="edit_mark.title" placeholder="Name" />
+		</div>
+		<div class="form-group">
+			<label for="url">URL</label>
+			<input type="text" id="url"  class="form-control" ng-model="edit_mark.url" size="50" placeholder="URL" />
+		</div>
+		<div class="form-group">
+			<label for="description">Description</label>
+			<textarea id="description"  class="form-control" ng-model="edit_mark.description" />
+		</div>
+		<div class="form-group">
+			<label for="tags">Tags (separated by commas)</label>
+			<input type="text" id="tags"  class="form-control" ng-model="edit_mark.tags" />
+		</div>
+		<div class="form-group clearfix">
+			<label>Color Label</label>
+            <ul class="colorpicker" ng-repeat="color in colorlist">
+              <li ng-style="{'background-color': color}" ng-click="edit_mark.color = color" ng-class="{'active': edit_mark.color == color}">{{color}}</li>
+            </ul>
+        </div>
+		<!--<div class="form-group">
+			<label for="image">Image</label>
+			<input type="file" id="image"  class="form-control" accept="image/*" ng-model="edit_mark.image" />
+		</div>-->
+		<button type="submit" class="btn btn-primary">Save</button>
+	</form>
+
+<a href="#/" class="floating-icon btn" title="Back to search"><span class="glyphicon glyphicon-search"></span></a>

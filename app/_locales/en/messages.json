@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Bookmarks Extension",
+    "description": "The name of the extension"
+  },
+  "extDescription": {
+    "message": "HCI Spring 2015 Bookmark Extension Project by Florencia Bonarto, Courtney Hazen, and Sam Sewall.",
+    "description": "The description of the extension"
+  }
+}

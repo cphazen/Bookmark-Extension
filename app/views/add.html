@@ -1,0 +1,40 @@
+<section id="add">
+    <div layout="column">
+        <md-content class="md-padding">
+            <h1 class="md-headline">{{bookmarks.indexOf(current.item.url) > -1 ? "Edit" : "Add"}} Bookmark</h1>
+            <form name="addBookmark" ng-submit="current.save()">
+                <md-input-container>
+                    <label>Name</label>
+                    <input type="text" name="name" ng-model="current.item.title" required />
+                </md-input-container>
+                <md-input-container>
+                    <label>Address</label>
+                    <input type="text" name="address" ng-model="current.item.url" required />
+                </md-input-container>
+                <md-input-container>
+                    <label>Description</label>
+                    <textarea name="description" ng-model="current.item.description" />
+                </md-input-container>
+                <md-input-container class="select md-input-has-value">
+                    <label>Tags</label>
+                     <ui-select multiple tagging theme="select2" tagging-label=" " tagging-tokens="ENTER|," ng-model="current.item.tags" style="" style="order:2" class="md-input">
+                        <ui-select-match>{{$item}}</ui-select-match>
+                        <ui-select-choices repeat="t in test | filter:$select.search | limitTo:3">
+                          {{t}}
+                        </ui-select-choices>
+                     </ui-select>
+                </md-input-container>
+                <md-input-container class="md-input-has-value">
+                    <label >Color</label>
+                    <!--<input type="color" name="color" ng-model="current.item.color" />-->
+                    <colorpicker colorlist="color.list" selected="current.item.color" style="order:2;"></colorpicker>
+                </md-input-container>
+
+                <div layout="row" layout-align="center left">
+                    <md-button class="md-raised md-primary" type="submit">Save</md-button> 
+                    <md-button class="md-raised" ng-click="delete()" type="button">Delete</md-button>
+                </div>
+            </form>
+        </md-content>
+    </div>
+</section>

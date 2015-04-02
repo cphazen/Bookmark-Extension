@@ -1,0 +1,14 @@
+﻿<md-item>
+    <md-item-content>
+      <div class="md-icon-left">
+        <img ng-src="{{item.icon}}" class="face" alt="{{item.title}}">
+      </div>
+      <div class="md-tile-content">
+        <h3>{{item.title}}</h3>
+        <p>
+          {{item.description}}
+        </p>
+      </div>
+      <a href="#/add" ng-click="$parent.current.getMark(item.id)">edit</a>
+    </md-item-content>
+  </md-item>
